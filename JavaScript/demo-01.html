@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<h2 class=""></h2>
+		<script type="text/javascript">
+			var h2 = document.querySelector('h2');
+			h2.innerHTML = "hello !";
+			
+			function mutilply(num1,num2){
+				var result = num1*num2;
+				return result;
+			}
+			console.log(mutilply(2,4));
+		</script>
+		
+		<img src="img/1.png"/>
+		<script type="text/javascript">
+			var myImage = document.querySelector("img");
+			myImage.onclick=function(){
+				var mySrc = myImage.getAttribute('src');
+				if(mySrc === 'img/1.png'){
+					myImage.setAttribute('src','img/2.png');
+				}else{
+					myImage.setAttribute('src','img/1.png');
+				}
+			}
+		</script>
+		
+		<!--localStorage-->
+		<h3>userName</h3>
+		<button> change user</button>
+		<script type="text/javascript">
+			var myButton = document.querySelector("button");
+			var myHeading = document.querySelector('h3');
+			function setUserName(){
+				var myName = prompt('please enter your name.');
+				localStorage.setItem('name',myName);
+				myHeading.innerHTML = 'aaaaaaaaaaaa-' + myName;  
+			}
+			if(!localStorage.getItem('name')){
+				setUserName();
+			}else{
+				var storeName = localStorage.getItem('name');
+				myHeading.innerHTML = 'bbbbbbbbbb-' + storeName;
+			}
+			myButton.onclick = function(){
+				setUserName();
+			}
+		</script>
+		
+	</body>
+</html>
