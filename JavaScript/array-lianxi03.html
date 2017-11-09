@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div class="commodity">
+			<ul>
+				<li>价格表</li>
+			</ul>
+			<p></p>
+		</div>
+		<script>
+			var listCommodity = document.querySelector('.commodity ul');
+			var totalPrice = document.querySelector('.commodity p');
+			var total = 0;
+			var stringProducts = ['Underpants:6.99',
+			                'Socks:5.99',
+			                'T-shirt:14.99',
+			                'Trousers:31.99',
+			                'Shoes:23.99']	
+        	for(var i=0;i < stringProducts.length; i++){
+        		var products = stringProducts[i].split(':');
+        		var name = products[0];
+        		var price = Number(products[1]);
+        		total += price;
+        		var listCommodityItem = document.createElement('li');
+        		listCommodityItem.textContent = name + '----$' + price;
+        		listCommodity.appendChild(listCommodityItem);
+        	}
+        	totalPrice.textContent = 'total: $' + total.toFixed(2);
+        	
+        	
+        	
+        	
+			                
+		</script>
+		
+		
+		<div class="search">
+			<input class="text" type="text" name="" id="" value="" />
+			<button class="btn" value="Search">Search</button>
+			<ul>
+				<li>搜索结果</li>
+			</ul>	
+		</div>
+		<script>
+			var searchList = document.querySelector('.search ul');
+			var searchInput = document.querySelector('.search .text');
+			var searchBtn = document.querySelector('.search .btn');
+			var myHistory = [];
+			searchList.innerHTML = '';
+			searchBtn.onclick = function(){
+				if(searchInput.value !== ''){
+					myHistory.unshift(searchInput.value);
+					searchList.innerHTML = '';
+					for(var j = 0;j < myHistory.length;j++){
+						var listSearchItem = document.createElement('li');
+						listSearchItem.textContent =  myHistory[j];
+						searchList.appendChild(listSearchItem);
+					}
+					if(myHistory.length >= 5){
+						myHistory.pop();
+					}
+					searchInput.value = '';
+					searchInput.focus();
+				}
+			}
+		</script>
+		
+		
+	</body>
+</html>

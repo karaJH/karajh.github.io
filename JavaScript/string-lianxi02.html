@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="output">
+			<ul>
+				<li>圣诞祝福</li>
+			</ul>
+		</div>
+		
+		<div class="city">
+			<ul>
+				<li>英国城市</li>
+			</ul>
+		</div>
+		
+		<div class="station">
+			<ul>
+				<li>车站</li>
+			</ul>
+		</div>
+		
+		
+		<script>
+			var list = document.querySelector('.output ul');
+			var greetings =['Happy Birthday!',
+							'Merry Christmas my love',
+							'A happy Christmas to all the family',
+							'You\'re all I want for Christmas',
+							'Get well soon'];
+			for(var i=0;i<greetings.length;i++){
+				if(greetings[i].indexOf('Christmas') !== -1){
+					var result = greetings[i];
+					var listItem = document.createElement('li');
+					listItem.textContent = result;
+					list.appendChild(listItem);
+				}
+			}
+			
+			var listCity = document.querySelector('.city ul');
+			var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+			for(var j=0;j<cities.length;j++){
+				var cityCrrent = cities[j].toLowerCase();
+				cityCrrent = cityCrrent.slice(0,1).toUpperCase() + cityCrrent.slice(1);
+				var listCityItem = document.createElement('li');
+				listCityItem.textContent = cityCrrent;
+				listCity.appendChild(listCityItem);
+			}
+			
+			
+			var listStation = document.querySelector('.station ul');
+			var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+			                'GNF576746573fhdg4737dh4;Greenfield',
+			                'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+			                'SYB4f65hf75f736463;Stalybridge', 
+			                'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+			for(var s=0;s<stations.length;s++){
+				var stationCode = stations[s].slice(0,3) + ': ';
+				var readableName = stations[s].slice(stations[s].indexOf(';') + 1);
+				var listStationItem = document.createElement('li');
+				listStationItem.textContent = stationCode + readableName;
+				listStation.appendChild(listStationItem);
+			}
+			
+		</script>
+	</body>
+</html>
