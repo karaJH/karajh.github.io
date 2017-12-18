@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background-color: #ccc;
+			}
+			.vaptcha-loading{
+				position: absolute;
+				width: 100%;
+                height: 100%;
+                font-size: 0;
+                /*text-align: center;*/
+			}
+			.vaptcha-loading div {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-top: -12px;
+				display: inline-block;
+		        width: 8px;
+		        height: 8px;
+		        background-color: #12c0fa;
+		        border-radius: 50%;
+		        -webkit-border-radius: 50%;
+		        -moz-border-radius: 50%;
+		        -ms-border-radius: 50%;
+		        animation: bounceDelay 1s infinite ease-in-out;
+	        }
+	        .vaptcha-loading div.happy1{
+                animation-delay: -.32s;
+				margin-left: -20px;
+            }
+            .vaptcha-loading div.happy2{
+                animation-delay: -.16s;
+                margin-right: 4px;
+				margin-left: -4px;
+            }
+            .vaptcha-loading div.happy3{
+				margin-left: 12px;
+            }
+	        @keyframes bounceDelay {
+                0%,
+                80%,
+                to {
+                    transform: scale(0)
+                }
+                40% {
+                    transform: scale(1)
+                }
+            }
+            @-webkit-keyframes bounceDelay {
+                0%,
+                80%,
+                to {
+                    -webkit-transform: scale(0)
+                }
+                40% {
+                    -webkit-transform: scale(1)
+                }
+            }
+            @-moz-keyframes bounceDelay {
+                0%,
+                80%,
+                to {
+                    -moz-transform: scale(0)
+                }
+                40% {
+                    -moz-transform: scale(1)
+                }
+            }
+		</style>
+	</head>
+	<body>
+		<div class="vaptcha-loading">
+            <div class="happy1"></div>
+            <div class="happy2"></div>
+            <div class="happy3"></div>
+        </div>
+	</body>
+</html>

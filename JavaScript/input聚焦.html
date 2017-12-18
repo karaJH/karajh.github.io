@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.vp-btn-tip-cont {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                /*height: calc(100% - 40px);
+                height: -webkit-calc(100% - 40px);
+                height: -moz-calc(100% - 40px);*/
+                padding: 6px;
+                background: rgba(39, 39, 52, .8);
+                filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#CC272734', endColorstr='#CC272734');
+            }
+            .vp-btn-tip-cont:after {
+                position: absolute;
+                bottom: -11px; 
+                right: 57px;
+                content: '';
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border-top: 11px solid #3C3C48;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+            }
+            .vp-btn-tip-cont .vp-btn-tip-title {
+                padding-bottom: 6px;
+                font-size: 12px;
+                color: #FFFF26;
+                
+            }
+            .vp-btn-tip-title span{
+                color: #26FFFF;
+            }
+            .vp-btn-tip-intro p{
+                position: relative;
+                margin: 0;
+                padding: 0;
+                margin-bottom: 4px;
+                font-size: 12px;
+                color: #EDEDED;
+                text-indent: 10px;
+            }
+            .vp-btn-tip-intro p:before{
+                position: absolute;
+                left: 0;
+                top: 6px;
+                content: '';
+                display: block;
+                width: 4px;
+                height: 4px;
+                background-color: #FFFFFF;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+
+            }
+		</style>
+	</head>
+	<body>
+		<!--<input class="form-control" type="text" placeholder="请输入" name="" id="" value="" />-->
+		<input class="form-control1" maxlength="3" type="text" autocomplete="off" placeholder="" name="" value="">
+		<button class="btn">聚焦</button>
+		
+		<script>
+			$('.btn').click(function(){
+//				$('.form-control').focus();
+				$('.form-control1').focus();
+			})
+		</script>
+		
+		
+		<div class="vp-btn-tip-cont" style="">
+            <div class="vp-btn-tip-title"><span>宕机模式</span>启动中，这是VAPTCHA的自我保护模式，可以被以下条件触发:</div>
+            <div class="vp-btn-tip-intro">
+                <p>VAPTCHA服务器全部宕机或以为阻塞导致请求严重超时</p>
+                <p>验证量超过了当前用户所购买的验证量上限</p>
+                <p>未正确配置SDK</p>
+            </div>
+        </div>
+		
+	</body>
+</html>
