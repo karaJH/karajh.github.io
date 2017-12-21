@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>菜鸟教程(runoob.com)</title>
+		
+	</head>
+
+	<body>
+
+		<div id="div1">
+			<p id="p1">这是一个段落。</p>
+			<p id="p2">这是另一个段落。</p>
+		</div>
+		<script>
+			var parent=document.getElementById("div1");
+			var child=document.createElement("p");
+			var nodeText = document.createTextNode("这是一个新段落");
+			child.appendChild(nodeText);
+			parent.appendChild(child);
+			child.parentNode.removeChild(child);
+			parent.appendChild(child);
+			
+			var message = "Hello World!";
+			console.log(message.length);
+			
+//			var person = new Object();
+//			person.first = "john";
+//			person.last = "doe";
+//			person.age = 20;
+//			person.eyecolor = "blue";
+//			console.log(person);
+			
+			function person(firstname,lastname,age,eyecolor)
+			{
+				this.firstname=firstname;
+				this.lastname=lastname;
+				this.age=age;
+				this.eyecolor=eyecolor;
+			}
+			var per = new person("111","222","333","444");
+			console.log(per);
+			 
+		</script>
+	</body>
+
+</html>

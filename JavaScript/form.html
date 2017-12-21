@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<style type="text/css">
+			input.error{
+				border-color: #FF5400;
+			}
+			.tip{
+				display: none;
+				font-size: 12px;
+				color: #FF5400;
+			}
+		</style>
+		<script>
+			function validateForm() {
+//				var name = document.forms["myForm"]["fname"];
+//				var phone = document.forms["myForm"]["fphone"];
+//				var passWord = document.forms["myForm"]["fpassword"];
+				var name = document.getElementsByClassName("name")[0];
+				var phone = document.getElementsByClassName("phone")[0];
+				var email = document.getElementsByClassName("email")[0];
+				var passWord = document.getElementsByClassName("password")[0];
+				var nameTip = document.getElementsByClassName("name_tip")[0];
+				var phoneTip = document.getElementsByClassName("phone_tip")[0];
+				var emailTip = document.getElementsByClassName("email_tip")[0];
+				var passwordTip = document.getElementsByClassName("password_tip")[0];
+				//名字
+				if(name.value == null || name.value == "") {
+					name.className+=" error";
+					nameTip.style.display="inline-block";
+//					return false;
+				}
+				//e-mail
+				var atpos=email.value.indexOf("@");
+				var dotpos=email.value.lastIndexOf(".");
+				if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.value.length){
+					alert("不是一个有效的 e-mail 地址");
+					return false;
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<form name="myForm" action="demo-form.php" onsubmit="return validateForm()" method="post">
+			<span>名字: </span>
+			<input class="name" type="text" name="fname" >
+			<span class="tip name_tip">名字为必填项</span><br />
+			<span>电话号码：</span>
+			<input class="phone" type="tel" name="fphone" maxlength="11" />
+			<span class="tip phone_tip">电话号码填写错误</span><br />
+			<span>邮箱：</span>
+			<input class="email" type="" name="femail" maxlength="100" />
+			<span class="tip email_tip">邮箱格式不对</span><br />
+			<span>密码：</span>
+			<input class="password" type="password" name="fpassword" minlength="6"/>
+			<span class="tip password_tip">密码错误</span>
+			<!--验证码：<input type="number" maxlength="4" name="fpassword"/>-->
+			<input type="submit" value="提交">
+		</form>
+
+
+		<div class="">
+			<h4>知识点</h4>
+			<p>Internet Explorer 9 及更早 IE 浏览器不支持表单自动验证。</p>
+		</div>
+		
+	</body>
+
+</html>
