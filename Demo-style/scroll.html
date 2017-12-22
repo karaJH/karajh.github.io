@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.nav{
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 240px;
+				background: tan;
+				margin-bottom: 20px;
+				transition: top 212ms linear;
+				-webkit-transition: top 212ms linear;
+				-moz-transition: top 212ms linear;
+				-o-transition: top 212ms linear;
+				z-index: 110;
+			}
+			.nav1{
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 40px;
+				background: gold;
+			}
+			.main{
+				padding-top: 260px;
+				width: 100%;
+				/*height: calc(100% - 280px);
+				height: -webkit-calc(100% - 280px);
+				height: -moz-calc(100% - 280px);
+				height: -o-calc(100% - 280px);*/
+				background: #fff;
+			}
+			.side{
+				float: left;
+				width: 30%;
+				height: 400px;
+				background: thistle;
+			}
+			.cont{
+				
+				margin-left: 40%;
+				width: 60%;
+				height: 2000px;
+				background: gray;
+			}
+		</style>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="nav"><div class="nav1"></div></div>
+		<div class="main">
+			<div class="side"></div>
+			<div class="cont">1111111111111111</div>
+		</div>
+		
+		
+		<script>
+			var winHeight = $(document).scrollTop();
+			$(function () {
+				$(window).on('scroll', function () {
+					 //隐藏顶部导航
+			        var scrollY = $(document).scrollTop(); 
+			        console.log(scrollY);
+			        if (scrollY > 100) { 
+			            $(".nav").css("top","-200px");
+			        } else {
+						 $(".nav").css("top","0");
+			        }
+				});
+			});
+		</script>
+	</body>
+</html>

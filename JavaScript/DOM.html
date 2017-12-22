@@ -39,9 +39,29 @@
 				this.age=age;
 				this.eyecolor=eyecolor;
 			}
+			
 			var per = new person("111","222","333","444");
-			console.log(per);
+			console.log(per.lastname);
 			 
+			 
+			var ga={fname:"John",lname:"Doe",age:25};
+			var x=1,txt="";
+			for ( x in ga)
+			{
+			    txt=txt + ga[x]; 
+			}
+			console.log(txt); 
+			 
+			 
+			var myNumber=2;
+			while (myNumber!=Infinity)
+			{
+			    myNumber=myNumber*myNumber; // 重复计算直到 myNumber 等于 Infinity
+			} 
+			console.log(myNumber);
+			
+			
+			
 		</script>
 	</body>
 
