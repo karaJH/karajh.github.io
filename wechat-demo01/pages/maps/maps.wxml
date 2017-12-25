@@ -1,0 +1,6 @@
+<!--maps.wxml-->
+<view class="container">
+  <block>
+    <map bindmarkertap="markertap"></map>
+  </block>
+</view>
