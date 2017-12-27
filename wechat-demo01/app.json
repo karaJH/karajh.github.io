@@ -16,19 +16,19 @@
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "images/index.png",
-        "selectedIconPath": ""
+        "selectedIconPath": "images/m.jpg"
       },
       {
         "pagePath": "pages/logs/logs",
         "text": "日志",
         "iconPath": "images/log.png",
-        "selectedIconPath": ""
+        "selectedIconPath": "images/m.jpg"
       },
       {
         "pagePath": "pages/maps/maps",
         "text": "地图",
         "iconPath": "images/map.png",
-        "selectedIconPath": ""
+        "selectedIconPath": "images/m.jpg"
       }
     ]
   },
@@ -36,5 +36,6 @@
     "request": 10000,
     "downloadFile": 10000
   },
+  "onPullDownRefresh": "enablePullDownRefresh",
   "debug": true
 }
