@@ -1,19 +1,44 @@
 Page({
   data: {
-    maps: []
+    markers: [{
+      iconPath: "/images/others.png",
+      id: 0,
+      latitude: 23.099994,
+      longitude: 113.324520,
+      width: 50,
+      height: 50
+    }],
+    polyline: [{
+      points: [{
+        longitude: 113.3245211,
+        latitude: 23.10229
+      }, {
+        longitude: 113.324520,
+        latitude: 23.21229
+      }],
+      color: "#FF0000DD",
+      width: 2,
+      dottedLine: true
+    }],
+    controls: [{
+      id: 1,
+      iconPath: '/images/location.png',
+      position: {
+        left: 0,
+        top: 300 ,
+        width: 50,
+        height: 50
+      },
+      clickable: true
+    }]
   },
-  markertap: function () {
-    
+  regionchange(e) {
+    console.log(e.type)
   },
-  onLoad: function () {
-    this.setData({
-      
-    })
+  markertap(e) {
+    console.log(e.markerId)
   },
-  onShareAppMessage: function () {
-    return {
-      title: '自定义转发标题',
-      path: '/page/user?id=123'
-    }
+  controltap(e) {
+    console.log(e.controlId)
   }
 })

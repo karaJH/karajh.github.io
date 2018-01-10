@@ -35,5 +35,11 @@ App({
   },
   globalData: {
     userInfo: null
+  },
+  onShow: function(){
+    console.log("--onshow--");
+  },
+  onHide: function(){
+    console.log("--onHide--");
   }
 })

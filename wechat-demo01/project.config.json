@@ -9,8 +9,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.7.2",
-	"appid": "wx228ad410990635c4",
-	"projectname": "%E6%9C%80%E9%86%89%E7%9F%A5%E4%BA%86",
+	"appid": "touristappid",
+	"projectname": "TodoList",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -22,7 +22,14 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": 0,
+					"name": "page",
+					"pathName": "pages/todo/index",
+					"query": ""
+				}
+			]
 		}
 	}
 }
