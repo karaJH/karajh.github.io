@@ -1,0 +1,9 @@
+<!--pages/shops/shops.wxml-->
+<block wx:for="{{items}}" wx:for-item="item" wx:key="*this">
+   <view bindtap='itemTap' data-item="{{item}}" class='item'>
+    <text>{{index + 1}}.</text>
+    <image class='image' src="{{item.url}}" mode="aspectFit"></image>
+    <text>{{item.name}}</text>
+    <text class='price'>{{item.price}} 元</text>  
+   </view>
+</block>

@@ -1,0 +1,28 @@
+/* pages/item/item.wxss */
+.item {  
+  align-items: center;    
+  box-sizing: border-box;  
+  border: 1px solid lightgrey;  
+  border-radius: 5px;  
+  margin: 0rpx 10rpx;  
+  padding: 100rpx 0rpx 10rpx 10rpx;  
+  background-color: lightcyan;  
+}  
+.image {  
+    width: 100%;  
+}  
+.title {  
+    border-bottom: 1px solid lightgray;  
+    width: 80%;  
+    line-height: 100px;  
+    text-align: center;  
+}  
+.price {  
+   line-height: 80px;  
+   text-align: right;  
+   width: 80%;  
+   font-family: "YouYuan";  
+   font-size: 30px;  
+   font-weight: bold;  
+   font-style:oblique;  
+}  
