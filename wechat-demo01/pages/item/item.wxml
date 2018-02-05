@@ -1,0 +1,6 @@
+<!--pages/item/item.wxml-->
+<view class="container item">  
+<image class="image" src="{{item.url}}" mode="aspectFit"></image>  
+<text class="title">{{item.name}}</text>  
+<text class="price">{{item.price}} 元</text>  
+</view>  

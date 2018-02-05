@@ -1,8 +1,8 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/maps/maps"
+    "pages/shops/shops",
+    "pages/item/item"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -20,14 +20,8 @@
         "selectedIconPath": "images/m.jpg"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志",
-        "iconPath": "images/log.png",
-        "selectedIconPath": "images/m.jpg"
-      },
-      {
-        "pagePath": "pages/maps/maps",
-        "text": "地图",
+        "pagePath": "pages/shops/shops",
+        "text": "超市",
         "iconPath": "images/map.png",
         "selectedIconPath": "images/m.jpg"
       }

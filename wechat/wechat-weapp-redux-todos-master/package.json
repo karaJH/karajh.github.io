@@ -1,0 +1,40 @@
+{
+  "name": "wechat-weapp-redux-todos",
+  "version": "0.1.0",
+  "description": "weapp todo build with redux",
+  "main": "index.js",
+  "repository": "git@github.com:charleyw/wechat-weapp-redux-todos.git",
+  "author": "Chao Wang <cwang8023@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npm run remote-dev-server && NODE_ENV=development gulp dev",
+    "remote-dev-server": "remotedev --hostname=localhost --port=5678 &",
+    "build": "gulp build",
+    "release": "NODE_ENV=production gulp build"
+  },
+  "dependencies": {
+    "redux": "^3.6.0",
+    "redux-persist": "^4.6.0",
+    "redux-saga": "^0.14.6",
+    "regenerator": "^0.9.7",
+    "webpack-stream": "^3.2.0",
+    "wechat-weapp-redux": "0.1.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean": "^0.3.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-watch": "^4.3.11",
+    "json-server": "^0.10.0",
+    "remotedev-server": "^0.3.0-beta-3",
+    "run-sequence": "^1.2.2",
+    "webpack": "^2.3.2"
+  }
+}
