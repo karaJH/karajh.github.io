@@ -1,0 +1,45 @@
+<!--pages/reports/reports.wxml-->
+<view class="container">
+  <view class="report-title">{{userInfo.nickName}}你已击败全国{{defeatRate}}的用户</view>
+  <view class="grade-group">
+    <image src="{{speedGrade.grade1.gradeSrc}}"></image>
+    <text class="grade-text">{{speedGrade.grade1.gradeText}}</text>
+  </view>
+  <view class="result">
+    <view class="result-opt">
+      <text class="fl">测试报告</text>
+      <text class="fr">查看更多测试详情></text>
+    </view> 
+    <view class="result-cont">
+      <view class="result-item">
+        <text class="item-title">排名</text>
+        <view class="item-cont">
+          <text class="item-num">12</text>
+          <text class="item-unit">th</text>
+        </view>
+      </view>
+      <view class="result-item">
+        <text class="item-title">单图平均耗时</text>
+        <view class="item-cont">
+          <text class="item-num">120</text>
+          <text class="item-unit">ms</text>
+        </view>
+      </view>
+      <view class="result-item">
+        <text class="item-title">总耗时</text>
+        <view class="item-cont">
+          <text class="item-num">11.22</text>
+          <text class="item-unit">s</text>
+        </view>
+      </view>
+    </view>
+    <text class="result-intro">说明：耗时包含服务器响应时间，所以大于单图耗时总和，排名以总耗时为准</text>
+  </view>
+  <view class='handspeed-btn active'>
+      <button class="primary" bindtap=''>开始测试</button>
+      <view class='ranking'>
+          <navigator url="../logs/logs" open-type="redirect" hover-class="navigator-hover">查看排行榜 ></navigator>
+      </view>
+  </view>
+
+</view>

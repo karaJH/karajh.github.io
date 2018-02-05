@@ -1,0 +1,46 @@
+/**app.wxss**/
+page{
+  height: 100%;
+  background-color: #212b39;
+} 
+.container {
+  height: 100%;
+  box-sizing: border-box;
+  
+} 
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.font-flow{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/*按钮  */
+.handspeed-btn{
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 90rpx;
+  text-align: center;
+}
+.handspeed-btn .primary{
+   width: 460rpx;
+   height: 94rpx;
+   font-size: 36rpx;
+   color: #fff;
+   background: #11BFF9;
+   border-radius: 50rpx;
+}
+.handspeed-btn.active{
+  display: block;   
+}
+.handspeed-btn .ranking{
+  margin-top: 60rpx;
+  color: #fff;
+  font-size: 32rpx;
+}

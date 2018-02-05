@@ -1,8 +1,10 @@
 {
   "pages":[
+    "pages/test/test",
     "pages/index/index",
     "pages/shops/shops",
     "pages/item/item"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -13,6 +15,12 @@
   "tabBar": {
     "position": "bottom",
     "list": [
+      {
+        "pagePath": "pages/test/test",
+        "text": "test",
+        "iconPath": "images/log.png",
+        "selectedIconPath": "images/m.jpg"
+      },
       {
         "pagePath": "pages/index/index",
         "text": "首页",

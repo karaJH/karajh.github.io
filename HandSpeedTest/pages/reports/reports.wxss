@@ -1,0 +1,77 @@
+/* pages/reports/reports.wxss */
+.report-title{
+  padding-top: 30rpx;
+  padding-bottom: 40rpx;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+}
+/*grade  */
+.grade-group{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.grade-group image{
+  width: 176rpx;
+  height: 176rpx;
+  border-radius: 50%;
+}
+.grade-group .grade-text{
+  margin-top: 10rpx;
+  font-size: 20px;
+  color: #ffffff;
+}
+/*result  */
+.result{
+  margin-top: 50rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  height: 348rpx;
+  background-color: #1a222d;
+  border: 1px solid #303e52;
+}
+.result .result-opt{
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  border-bottom: 1px solid #303e52;
+}
+.result .result-opt text{
+  font-size: 13px;
+  color: #3c8aff;
+}
+.result .result-cont{
+  display: flex;
+}
+.result .result-cont .result-item{
+  padding-left: 30rpx;
+  width: 33.33%;
+  height: 266rpx;
+}
+.result .result-item .item-title{
+  font-size: 13px;
+  color: #999999;
+  line-height: 90rpx;
+}
+.result .result-cont{
+  line-height: 90rpx;
+}
+.result .result-cont .item-num{
+  margin-right: 4px;
+  font-size: 24px;
+  color: #ffbf00;
+}
+.result .result-cont .item-unit{
+  font-size: 14px;
+  color: #999999;
+}
+.result .result-item:nth-child(2){
+  background-color: #1c2530;
+}
+.result .result-intro{
+  font-size: 11px;        
+  color: #384860;
+  line-height: 14px;
+}
